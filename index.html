@@ -1,2 +1,441 @@
-"hello world"
+<!DOCTYPE html>
+<!-- 
 
+CS 109 Final Project
+Hunting for Short Squeeze
+
+by 
+
+Richard Kim 
+richardskim111@gmail.com
+
+& 
+
+Shumiao Ouyang
+oyoungforever@gmail.com
+
+
+Design Template: Freelance
+http://startbootstrap.com/template-overviews/freelancer/
+
+ -->
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Richard Kim & Shumiao Ouyang">
+
+    <title>CS 109 Final Project - Hunting for Short Squeeze</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Freenlance CSS -->
+    <link href="static/css/freelancer.css" rel="stylesheet">
+
+    <!-- CS109 Custom CSS -->
+    <link href="static/css/cs109.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="static/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">Hunting for Short Squeeze</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#screencast">Screencast</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#short-squeeze">Introduction</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#financial-statements">Analysis</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#hidden-markov-model">Outcome</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About Us</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-text">
+                        <span class="name">Hunting for Short Squeeze</span>
+                        <hr class="star-light">
+                        <span class="skills">Richard Kim & Shumiao Ouyang</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="screencast" class='light-grey'>
+    	<div class="container">
+    		<div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Video Introduction</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+    	</div>
+    </section>
+
+    <section id="short-squeeze">
+    	<div class="container">
+    		<div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>What is Short Squeeze</h2>
+                    <hr class="star-primary">
+
+                    <div class='row'>
+                    	<div class="col-md-8 col-md-offset-2">
+
+                    		<p>In October 2008, Volkswagen AG, the German automanufacturer, briefly became the most valuable company in the world as its share price jumped from €209.63 on October 24th 2008 to €939.53 on October 28th 2008, which was over 4 fold jump in the share price within 2 trading days. This rare phenomenon was attributed as a result of "Short Squeeze."</p>
+                    		<img class='center-block' src='static/img/volkswagen.png' alt='volkswagen'/>
+                    		<p>Short sale is an investment/trading method in which an investor borrows shares of the interested stock from a broker and sells it back in the market. Typically, investors will short sell a stock if they have a pessimistic outlook on the underlying company. For example, he or she may believe that earnings (or sales, operating cash flow, etc) of the company will substantially decline. Other reasons may include - for a pharmaceutical company, rejection of a drug by FDA; for a defense company, loss of government contract, etc.</p>
+							<p>Short sale strategy is to sell the stock when it is high and buy it back when it is low. Thus, the strategy is the opposite of the common and widely known investment strategy - "buy low, and sell high." Short sale strategy can be described as "sell high, and buy low." It is an investment strategy often utilized by hedge funds and sophisticated individual investors.</p>
+							<p>When a sufficiently large number of investors short sales a stock, this stock has a potential to experience Short Squeeze when these short investors in a relatively close period of time attempt to cover (buy back) their short sale position. In such an instance, the stock price may jump rapidly, often over 5% up to 30% ~ 50% in a day. As shown above in the example of Volkswagen in 2008, stock price may jump 400% in over 2 day period.</p>
+
+							<p>For additional information about Short Squeeze please take a look at the link below:</p>
+
+							<p><a href='http://wiki.fool.com/Short_squeeze'>http://wiki.fool.com/Short_squeeze</a></p>
+
+
+							<p>For additional information about Volkswagen share price in October 2008: </p>
+
+							<p><a href='http://www.reuters.com/article/2008/10/28/us-volkswagen-idUSTRE49R3I920081028'>http://www.reuters.com/article/2008/10/28/us-volkswagen-idUSTRE49R3I920081028</a></p>
+                    	</div>	
+                    </div>
+                </div>
+            </div>
+    	</div>
+    </section>
+
+    <section id="motivation" class='light-grey'>
+    	<div class="container">
+    		<div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Motivation</h2>
+                    <hr class="star-primary">
+                    <div class='row'>
+                    	<div class="col-md-8 col-md-offset-2">
+                    	<p>Richard Kim, CFA, had worked as an equity research analyst and investment banking analyst for approximately 6 years. During his tenure as an analyst, he has personally seen numerous short squeeze phenomenons in the market; moreover, as a part of his duty as an analyst, he had to seek out and predict these short squeeze opportunities in the market. Richard analyzed trends in the historical financial statements, other analysts' estimates, short interest data, etc. and applied human intuition, experience, and know-how to predict the short squeeze trading opportunities.</p>
+
+                    	<p>While considered a highly risky strategy, successful short sale trade can be highly rewarding - sometimes generating over 20% return in a matter of few weeks. Thus, many analysts and traders invest significant amount of time and energy into building up the skills to successfully predict short squeeze phenomenons.</p>
+
+                    	<p>So we asked the following question:</p>
+
+                    	<h3>Can we teach a machine to predict Short Squeeze opportunities in the market?</h3>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+    	</div>
+    </section>
+
+    <section id="data">
+    	<div class="container">
+    		<div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>The Data</h2>
+                    <hr class="star-primary">
+
+                    <div class="row">
+	                    <div class="col-md-8 col-md-offset-2">
+		                    <p>With over 20,000 stocks traded in North American financial markets alone, in order to narrow down our focus, we targeted S&P 500 companies. S&P 500 companies represent some of the largest publicly traded companies in the US, and they are listed on various stock exchanges including NYSE and NASDAQ. We limited our data to 10 years.</p>
+
+		                    <img src="static/img/sp500.jpg" alt='S & P 500'>
+
+		                    <p>We found Wharton Research Data Services (WRDS) through Harvard Business School's Baker Library, which hosted a large array of financial data on the US and international companies around the world.</p>
+		                    	<img src="static/img/wrds_logo.jpg" alt='Wharton Research Data Services'>
+	                    
+                    
+
+		                    <p>There are countless variables that impact stock price movements.  We decided to focus our research on the following variables: </p>
+		                    <ul>
+		                    	<li><p><i class="fa fa-database"></i> Price & Volume</p></li>
+		                    	<li><p><i class="fa fa-database"></i> Short Interest</p></li>
+		                    	<li><p><i class="fa fa-database"></i> Historical Financial Statements</p></li>
+		                    	<li><p><i class="fa fa-database"></i> Equity Analyst's EPS Estimates</p></li>
+		                    </ul>
+		                    
+		                    <p>Eliminating companies that did not have any one of the information above, we had total of </p>
+		                    <h3> <span style='color: #f00'>377</span> Companies</h3>
+		                    <h3> over <span style='color: #f00'>9 million</span> rows and </h3> 
+		                    <h3> over <span style='color: #f00'>4 gigabytes</span> of data</h3> 
+	                    </div>
+	                </div>
+            </div>
+            <hr>
+    	</div>
+    </section>
+  
+    <section id="financial-statements">
+    	<div class="container">
+
+    		<div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Financial Statements Analysis</h2>
+                    <hr class="star-primary">
+
+                    <div class="row">
+                    	<div class="col-md-8 col-md-offset-2">
+                    	<p>We gathered key financial statement items (i.e. Revenue, Operating Income, Net Income, EPS, Assets, Cash & Equivalent, and Equity) per each company every quarter up to 10 years.</p>
+                    	<img src="static/img/financial_trends.png" alt='Financial Statement Trends'>
+                    	
+
+						<h4>Is there a relationship between Short Squeeze Incidents and Earnings Announcement Dates?</h4>
+
+						<p>We felt that we can narrow down our observations to Short Squeeze incidents that happen on the day of or close to the day of the earnings announcements by the companies. Intuitively, when a company releases the quarterly financial statements sometimes they contain information that positively surprises (also, negatively) the market. For example, revenue might have increased by higher rate than historical trends or Earnings per Share (EPS) might have been significantly higher than estimates made by analysts in the market.</p>
+
+                    	<img src="static/img/days_from_announcement.png" alt='Scatter Matrix'>
+
+                    	<p>We could see that the Short Squeeze incidents were relatively normally distributed around the earninings announcement date, with clear exception of day zero - plus or minus approximately 4 days. Our intuition was likely correct in that these short squeeze opportunities happen as a result of new positive information released by the companies.</p>
+
+
+                    	
+                    	<h4>What factors in the Earnings (Financial Statements) Annoucements impact Short Squeeze Incidents?</h4>
+                    	
+
+                    	<img src="static/img/financial_scatter_matrix.png" alt='Scatter Matrix'>
+
+                    	<p>
+                    		Unfortunately, there was no visibly noticeable differences in financial results of those that resulted in Short Squeeze incident versus those that did not.
+                    	</p>
+
+                    	</div>
+                    </div>
+
+
+                </div>
+            </div>
+            <hr>
+    	</div>
+    </section>
+    
+    <section id="analyst-estimates">
+    	<div class="container">
+    		<div class="col-lg-12 text-center">
+                <h2>EPS Estimates & P/E Ratio</h2>
+                <hr class="star-primary">
+
+                <div class="row">
+                	<div class="col-md-8 col-md-offset-2">
+                	
+
+                	<p>For each of the companies, we collected EPS estimates made by the sell-side analysts per each period. We calculated moving 1 month average of the EPS estimates by all of the analyst on a given date. Using the average EPS estimates, we also calculated P/E ratios - a popular valuation metrics - on a given date.</p>
+
+                	<img src="static/img/eps_est_pe.png" alt='Analyst EPS Estimates & P/E Ratio'>
+
+
+                	<h4>How do EPS estimates, prices, and valuation change as the financial results announcement date approach?</h4>	                	
+                	<img src="static/img/eps_est_pe_analysis.png" alt='EPS Estimates & P/E Ratio Analysis'>
+
+                	<p>Interestingly, we find overall increase in share prices before the announcement date. In addition, we also find increase in Average EPS estimate. Even though we have not determined which variables are related to Short Squeeze events, we forge ahead to apply this data to machine learning algorithm.</p>
+
+
+                	</div>
+                </div>
+            
+            </div>
+
+    	</div>
+    </section>
+
+    <section id="hidden-markov-model">
+    	<div class="container">
+    		<div class="col-lg-12 text-center">
+                <h2>Hidden Markov Model</h2>
+                <hr class="star-primary">
+            	
+            	<div class="row">
+            		<div class="col-md-8 col-md-offset-2">
+		            	
+		            	<p>For this project, we took the opportunity to explore a machine learning technique that was not taught in the course.  We considered many models including RandomForest; however, due to the sequential nature of our data, we felt that Hidden Markov Model is the most appropriate model for this project.</p>
+
+		            	<p>For those who are not familiar with HMM, please take a look at the link below:</p>
+
+		            	<p><a href='http://en.wikipedia.org/wiki/Hidden_Markov_model'>http://en.wikipedia.org/wiki/Hidden_Markov_model</a></p>
+
+
+		            	<p>We utilized a python library <a href='https://github.com/larsmans/seqlearn'>seqlearn</a>, which is a supervised HMM learning module that has been modeled after scikit-learn.</p>
+
+		            	<p>We tested two different HMM methods available in seqlearn module:</p>
+
+		            	<ul>
+		            		<li><p><i class="fa fa-code-fork"></i> Multinomial HMM</p></li>
+		            		<li><p><i class="fa fa-code-fork"></i><a href='http://en.wikipedia.org/wiki/Structured_prediction'> Structured Perceptron</a></p></li>
+		            	</ul>
+
+		            	<img src="static/img/multinomialhmm_vs_structuredperceptron.png" alt='Multinomial HMM vs Structured Perceptron'>
+		            	
+		            	<p>While the scores of both Multinomial HMM and Structured Perceptron appear quite high; in reality, as was demonstrated in problem set 5, with overwhelming days of no-Short Squeeze Events, if we had predicted all '0's, we would have scored quite high as well.</p>
+
+		            	<p>In fact, we found out that Multinomial HMM never made a single prediction for '1'; it attained higher average score than Structured Perceptron. On the other hand, Structured Perceptron did make predictions of '1''s and still managed to score approximately over 90 percentile. We believe Structured Perceptron yields superior results.</p>
+		            
+		            	<p>we decided to test one of Structured Perceptron's parameters - maximum iteration, which is the number of times each sequence is used for prediction.</p>
+
+		            	<img src="static/img/structured_perceptron_params.png" alt='Parameter Test of Structured Perceptron Model'>
+
+		            	<p>The boxplot shows that there may be a modest improvement in prediction score as Max Iteration increases; however, the score leveled off after the parameter reached around 10.</p>
+	            	</div>
+	            </div>
+            </div>
+    	</div>
+    </section>
+
+
+    <section id="final-thoughts">
+    	<div class="container">
+    		<div class="col-lg-12 text-center">
+                <h2>Final Thoughts</h2>
+                <hr class="star-primary">
+                <div class="row">
+                	<div class="col-md-8 col-md-offset-2">
+                	 <p>While we can't claim to have found a method to perfectly predit Short Squeeze Events in the market (if so, we would be in position to make a lot of money!), we believe Structured Perceptron method is an interesting machine learning method for sequential data such as stock price movements. </p>
+
+                	 <p>We believe there is a lot of room for further exploration with the Structured Perceptron method.</p>
+                	</div> 
+	            </div>
+            </div>
+    	</div>
+    </section>
+
+    <section id="ipython-notebook">
+    	<div class="container">
+    		<div class="col-lg-12 text-center">
+                <h2>iPython Notebook & Database</h2>
+                <hr class="star-primary">
+
+                <div class="row">
+	                <div class="col-md-8 col-md-offset-2">
+
+	                	<p>To replicate our results: </p>
+		                <img src='static/img/ipython_notebook_screenshot.jpg' alt='iPython Notebook Screenshot'>
+			            <p><a href='https://github.com/richardskim111/hunt-for-short-squeeze'  target="_blank"><i class='fa fa-github'></i> https://github.com/richardskim111/hunt-for-short-squeeze</a></p>
+	            
+	            		<p>Our database is stored in MongoDB: </p>
+			            <img src='static/img/mongodb.jpg' alt="MongoDB">
+			            <p><a href='https://drive.google.com/file/d/0B9WiV2o6eTMSMDlaV1JqNVJUUjA/view?usp=sharing' target="_blank"><i class='fa fa-google-plus'></i> https://drive.google.com/file/d/0B9WiV2o6eTMSMDlaV1JqNVJUUjA/view?usp=sharing</a></p>
+			    	</div>        
+	            </div>
+            </div>
+    	</div>
+    </section>
+
+    <!-- About Section -->
+    <section class="success" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About Us</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                	<img src="static/img/richard_kim.jpg" alt='Richard Kim' class='center-block' />
+                    <p class='name text-center'>Richard Kim, CFA</p>
+                    <p class='text-center'><a href="mailto:richardskim111@gmail.com?Subject=CS109 Final Project Inquiry" target="_top">richardskim111@gmail.com</a></p>
+                    <p>Richard has worked as an investment banking analyst and an equity research analyst - focusing on Japanese financial markets for approximately 6 years prior to coming back to school.  He is currently pursing ALM in Information Technology - Mathematics & Computations through the Harvard Extension School.  Richard's research interests include machine learning and social computations as they relate to financial markets and natural languages.</p>
+                    
+                </div>
+                <div class="col-lg-6">
+	                <img src="static/img/shumiao_ouyang.jpg" alt='Shumiao Ouyang' class='center-block' />
+	                <p class='name text-center'>Shumiao Ouyang</p>
+                    <p class='text-center'><a href="mailto:oyoungforever@gmail.com?Subject=CS109 Final Project Inquiry" target="_top">oyoungforever@gmail.com</a></p>
+                    <p>Shumiao Ouyang is a graduate student of Peking University - Guanghua School of Management pursing Masters in Finance.  He has worked as a CFO of a start-up, Toyhouse (Tsinghua's Eduction Innovation Lab) and have participated in several academic research projects in economics and finance.  He was awareded Exellent Student Awards of Peking University in 2014.  Shumiao is interested in pursuing PhD in Economics.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; Richard Kim & Shumiao Ouyang
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+
+    <!-- jQuery -->
+    <script src="static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="static/js/classie.js"></script>
+    <script src="static/js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="static/js/jqBootstrapValidation.js"></script>
+    <script src="static/js/contact_me.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="static/js/freelancer.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+/*
+
+CS 109 Final Project
+Hunting for Short Squeeze
+
+by 
+
+Richard Kim 
+richardskim111@gmail.com
+
+& 
+
+Shumiao Ouyang
+oyoungforever@gmail.com
+
+
+*/
+
+
+.light-grey {
+	background-color: #e7e7e7;
+}
+
+.light-grey hr.star-primary:after {
+	background-color: #e7e7e7;	
+}
+
+ul {
+	list-style: none;
+}
+
+header .name {
+	padding: 100px 0;
+}
+
+
+
+#financial-statements img {
+	width: 500px;
+	margin: 10px 0;
+}
+
+#analyst-estimates img {
+	width: 500px;
+	margin: 10px 0;
+}
+
+#hidden-markov-model img {
+	width: 500px;
+	margin: 10px 0;
+}
+
+#ipython-notebook img {
+	width: 300px;
+	margin: 10px 0;
+}
+
+#about img {
+	border-radius: 100%;	 
+}
+
+#about .name {
+	margin: 10px 0;	 
+}
+
+#about a {
+	color: #fff;
+}
