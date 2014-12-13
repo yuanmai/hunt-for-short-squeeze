@@ -66,3 +66,12 @@ header .name {
 #about a {
 	color: #fff;
 }
+
+.portfolio-modal img {
+	width: 900px;
+}
+
+#portfolioModal7 img,
+#portfolioModal8 img {
+	width: 700px;
+}

@@ -142,7 +142,13 @@ http://startbootstrap.com/template-overviews/freelancer/
                     	<div class="col-md-8 col-md-offset-2">
 
                     		<p>In October 2008, Volkswagen AG, the German automanufacturer, briefly became the most valuable company in the world as its share price jumped from €209.63 on October 24th 2008 to €939.53 on October 28th 2008, which was over 4 fold jump in the share price within 2 trading days. This rare phenomenon was attributed as a result of "Short Squeeze."</p>
+
+                    		<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
                     		<img class='center-block' src='static/img/volkswagen.png' alt='volkswagen'/>
+
+                    		</a>
+
+
                     		<p>Short sale is an investment/trading method in which an investor borrows shares of the interested stock from a broker and sells it back in the market. Typically, investors will short sell a stock if they have a pessimistic outlook on the underlying company. For example, he or she may believe that earnings (or sales, operating cash flow, etc) of the company will substantially decline. Other reasons may include - for a pharmaceutical company, rejection of a drug by FDA; for a defense company, loss of government contract, etc.</p>
 							<p>Short sale strategy is to sell the stock when it is high and buy it back when it is low. Thus, the strategy is the opposite of the common and widely known investment strategy - "buy low, and sell high." Short sale strategy can be described as "sell high, and buy low." It is an investment strategy often utilized by hedge funds and sophisticated individual investors.</p>
 							<p>When a sufficiently large number of investors short sales a stock, this stock has a potential to experience Short Squeeze when these short investors in a relatively close period of time attempt to cover (buy back) their short sale position. In such an instance, the stock price may jump rapidly, often over 5% up to 30% ~ 50% in a day. As shown above in the example of Volkswagen in 2008, stock price may jump 400% in over 2 day period.</p>
@@ -232,14 +238,17 @@ http://startbootstrap.com/template-overviews/freelancer/
                     <div class="row">
                     	<div class="col-md-8 col-md-offset-2">
                     	<p>We gathered key financial statement items (i.e. Revenue, Operating Income, Net Income, EPS, Assets, Cash & Equivalent, and Equity) per each company every quarter up to 10 years.</p>
+                    	<a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
                     	<img src="static/img/financial_trends.png" alt='Financial Statement Trends'>
+                    	</a>
                     	
 
 						<h4>Is there a relationship between Short Squeeze Incidents and Earnings Announcement Dates?</h4>
 
 						<p>We felt that we can narrow down our observations to Short Squeeze incidents that happen on the day of or close to the day of the earnings announcements by the companies. Intuitively, when a company releases the quarterly financial statements sometimes they contain information that positively surprises (also, negatively) the market. For example, revenue might have increased by higher rate than historical trends or Earnings per Share (EPS) might have been significantly higher than estimates made by analysts in the market.</p>
-
+						<a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
                     	<img src="static/img/days_from_announcement.png" alt='Scatter Matrix'>
+                    	</a>
 
                     	<p>We could see that the Short Squeeze incidents were relatively normally distributed around the earninings announcement date, with clear exception of day zero - plus or minus approximately 4 days. Our intuition was likely correct in that these short squeeze opportunities happen as a result of new positive information released by the companies.</p>
 
@@ -247,8 +256,9 @@ http://startbootstrap.com/template-overviews/freelancer/
                     	
                     	<h4>What factors in the Earnings (Financial Statements) Annoucements impact Short Squeeze Incidents?</h4>
                     	
-
+                    	<a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
                     	<img src="static/img/financial_scatter_matrix.png" alt='Scatter Matrix'>
+                    	</a>
 
                     	<p>
                     		Unfortunately, there was no visibly noticeable differences in financial results of those that resulted in Short Squeeze incident versus those that did not.
@@ -276,12 +286,15 @@ http://startbootstrap.com/template-overviews/freelancer/
 
                 	<p>For each of the companies, we collected EPS estimates made by the sell-side analysts per each period. We calculated moving 1 month average of the EPS estimates by all of the analyst on a given date. Using the average EPS estimates, we also calculated P/E ratios - a popular valuation metrics - on a given date.</p>
 
+                	<a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
                 	<img src="static/img/eps_est_pe.png" alt='Analyst EPS Estimates & P/E Ratio'>
+                	</a>
 
 
-                	<h4>How do EPS estimates, prices, and valuation change as the financial results announcement date approach?</h4>	                	
+                	<h4>How do EPS estimates, prices, and valuation change as the financial results announcement date approach?</h4>	                
+                	<a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
                 	<img src="static/img/eps_est_pe_analysis.png" alt='EPS Estimates & P/E Ratio Analysis'>
-
+                	</a>
                 	<p>Interestingly, we find overall increase in share prices before the announcement date. In addition, we also find increase in Average EPS estimate. Even though we have not determined which variables are related to Short Squeeze events, we forge ahead to apply this data to machine learning algorithm.</p>
 
 
@@ -317,17 +330,20 @@ http://startbootstrap.com/template-overviews/freelancer/
 		            		<li><p><i class="fa fa-code-fork"></i> Multinomial HMM</p></li>
 		            		<li><p><i class="fa fa-code-fork"></i><a href='http://en.wikipedia.org/wiki/Structured_prediction'> Structured Perceptron</a></p></li>
 		            	</ul>
-
-		            	<img src="static/img/multinomialhmm_vs_structuredperceptron.png" alt='Multinomial HMM vs Structured Perceptron'>
 		            	
+		            	<a href="#portfolioModal7" class="portfolio-link" data-toggle="modal">
+		            	<img src="static/img/multinomialhmm_vs_structuredperceptron.png" alt='Multinomial HMM vs Structured Perceptron'>
+		            	</a>
+
 		            	<p>While the scores of both Multinomial HMM and Structured Perceptron appear quite high; in reality, as was demonstrated in problem set 5, with overwhelming days of no-Short Squeeze Events, if we had predicted all '0's, we would have scored quite high as well.</p>
 
 		            	<p>In fact, we found out that Multinomial HMM never made a single prediction for '1'; it attained higher average score than Structured Perceptron. On the other hand, Structured Perceptron did make predictions of '1''s and still managed to score approximately over 90 percentile. We believe Structured Perceptron yields superior results.</p>
 		            
 		            	<p>we decided to test one of Structured Perceptron's parameters - maximum iteration, which is the number of times each sequence is used for prediction.</p>
 
+		            	<a href="#portfolioModal8" class="portfolio-link" data-toggle="modal">
 		            	<img src="static/img/structured_perceptron_params.png" alt='Parameter Test of Structured Perceptron Model'>
-
+		            	</a>
 		            	<p>The boxplot shows that there may be a modest improvement in prediction score as Max Iteration increases; however, the score leveled off after the parameter reached around 10.</p>
 	            	</div>
 	            </div>
@@ -421,6 +437,203 @@ http://startbootstrap.com/template-overviews/freelancer/
         <a class="btn btn-primary" href="#page-top">
             <i class="fa fa-chevron-up"></i>
         </a>
+    </div>
+
+
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Volkswagen AG</h2>
+                            <hr class="star-primary">
+                            <img src='static/img/volkswagen.png' alt='volkswagen' class="img-responsive img-centered">
+                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Financial Statement Trend of Urban Outfitters, Inc. (URBN)</h2>
+                            <hr class="star-primary">
+                            <img src='static/img/financial_trends.png' alt='Financial Statement Trends' class="img-responsive img-centered">
+                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Histogram of Short Squeeze Events from Announcement Date</h2>
+                            <hr class="star-primary">
+                            <img src='static/img/days_from_announcement.png' alt='Scatter Matrix' class="img-responsive img-centered">
+                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Scatter Plot Matrix of Changes in Financial Statement Items</h2>
+                            <hr class="star-primary">
+                            <img src='static/img/financial_scatter_matrix.png' alt='Scatter Matrix' class="img-responsive img-centered">
+                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Example - Urban Outfitters, Inc.</h2>
+                            <hr class="star-primary">
+                            <img src="static/img/eps_est_pe.png" alt='Analyst EPS Estimates & P/E Ratio' class="img-responsive img-centered">
+                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Market Trends</h2>
+                            <h4>From -30 Days before to 5 Days after Announcement Dates</h4>
+                            <hr class="star-primary">
+                            <img src="static/img/eps_est_pe_analysis.png" alt='EPS Estimates & P/E Ratio Analysis' class="img-responsive img-centered">
+                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Multinomial HMM vs Structured Perceptron</h2>
+                            
+                            <hr class="star-primary">
+                            <img src="static/img/multinomialhmm_vs_structuredperceptron.png" alt='Multinomial HMM vs Structured Perceptron'>
+                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Structured Perceptron: Max-Iteration Parameter Test </h2>
+                            
+                            <hr class="star-primary">
+                            <img src="static/img/structured_perceptron_params.png" alt='Parameter Test of Structured Perceptron Model'>
+                            
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
